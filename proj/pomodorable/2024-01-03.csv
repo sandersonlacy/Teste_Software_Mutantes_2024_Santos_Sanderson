@@ -1,0 +1,25 @@
+date,act,time,task,message,notes
+2024-01-03,S,08:05:01,Test session 3,(00:10 session < 25:00 default),
+2024-01-03,R,08:05:03,,Pause (resumed),Test pause 3
+2024-01-03,F,08:05:11,,Finish,Started at 08:05:01
+2024-01-03,S,08:35:01,Test session 4,(00:10 session < 25:00 default),
+2024-01-03,R,08:35:03,,Pause (resumed),Test pause 4
+2024-01-03,F,08:35:11,,Finish,Started at 08:35:01
+2024-01-03,S,08:05:01,Test session 3,(00:10 session < 25:00 default),
+2024-01-03,R,08:05:03,,Pause (resumed),Test pause 3
+2024-01-03,F,08:05:11,,Finish,Started at 08:05:01
+2024-01-03,S,08:35:01,Test session 4,(00:10 session < 25:00 default),
+2024-01-03,R,08:35:03,,Pause (resumed),Test pause 4
+2024-01-03,F,08:35:11,,Finish,Started at 08:35:01
+2024-01-03,S,08:05:01,Test session 3,(00:10 session < 25:00 default),
+2024-01-03,R,08:05:03,,Pause (resumed),Test pause 3
+2024-01-03,F,08:05:11,,Finish,Started at 08:05:01
+2024-01-03,S,08:35:01,Test session 4,(00:10 session < 25:00 default),
+2024-01-03,R,08:35:03,,Pause (resumed),Test pause 4
+2024-01-03,F,08:35:11,,Finish,Started at 08:35:01
+2024-01-03,S,08:05:01,Test session 3,(00:10 session < 25:00 default),
+2024-01-03,R,08:05:03,,Pause (resumed),Test pause 3
+2024-01-03,F,08:05:11,,Finish,Started at 08:05:01
+2024-01-03,S,08:35:01,Test session 4,(00:10 session < 25:00 default),
+2024-01-03,R,08:35:03,,Pause (resumed),Test pause 4
+2024-01-03,F,08:35:11,,Finish,Started at 08:35:01

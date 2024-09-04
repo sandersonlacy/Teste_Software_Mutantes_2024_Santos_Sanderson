@@ -1,0 +1,575 @@
+
+<!-- saved from url=(0110)file:///home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body><h1>/home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py</h1>Killed 43 out of 95 mutants<h2>Timeouts</h2>Mutants that made the test suite take a lot longer so the tests were killed.<h3>Mutant 24</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -24,7 +24,7 @@
+     If there are errors in the options, print an error message and exit.
+     If options are handled, return True; otherwise, return False.
+     """
+-    if csv_date is None and md_date is None:
++    if csv_date is not None and md_date is None:
+         if export_path is not None:
+             sys.stderr.write(
+                 "\n--export-path option requires either --csv-date or "
+</pre><h3>Mutant 25</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -24,7 +24,7 @@
+     If there are errors in the options, print an error message and exit.
+     If options are handled, return True; otherwise, return False.
+     """
+-    if csv_date is None and md_date is None:
++    if csv_date is None and md_date is not None:
+         if export_path is not None:
+             sys.stderr.write(
+                 "\n--export-path option requires either --csv-date or "
+</pre><h3>Mutant 26</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -24,7 +24,7 @@
+     If there are errors in the options, print an error message and exit.
+     If options are handled, return True; otherwise, return False.
+     """
+-    if csv_date is None and md_date is None:
++    if csv_date is None or md_date is None:
+         if export_path is not None:
+             sys.stderr.write(
+                 "\n--export-path option requires either --csv-date or "
+</pre><h3>Mutant 65</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -74,7 +74,7 @@
+     if md_date is not None:
+         app_data.cli_export_daily_markdown(md_date, filters, export_path)
+ 
+-    return True
++    return False
+ 
+ 
+ def run(enable_screenshots: bool, enable_testkey: bool) -&gt; None:
+</pre><h2>Survived</h2>Survived mutation testing. These mutants show holes in your test suite.<h3>Mutant 22</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -9,7 +9,7 @@
+ from pomodorable.ui import PomodorableApp
+ 
+ DIST_NAME = "pomodorable"
+-MOD_VERSION = "cli-240509.1"
++MOD_VERSION = "XXcli-240509.1XX"
+ 
+ 
+ def get_app_version() -&gt; str:
+</pre><h3>Mutant 23</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -9,7 +9,7 @@
+ from pomodorable.ui import PomodorableApp
+ 
+ DIST_NAME = "pomodorable"
+-MOD_VERSION = "cli-240509.1"
++MOD_VERSION = None
+ 
+ 
+ def get_app_version() -&gt; str:
+</pre><h3>Mutant 27</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -25,7 +25,7 @@
+     If options are handled, return True; otherwise, return False.
+     """
+     if csv_date is None and md_date is None:
+-        if export_path is not None:
++        if export_path is  None:
+             sys.stderr.write(
+                 "\n--export-path option requires either --csv-date or "
+                 "--md-date option.\n"
+</pre><h3>Mutant 28</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -27,7 +27,7 @@
+     if csv_date is None and md_date is None:
+         if export_path is not None:
+             sys.stderr.write(
+-                "\n--export-path option requires either --csv-date or "
++                "XX\n--export-path option requires either --csv-date or XX"
+                 "--md-date option.\n"
+             )
+             sys.exit(1)
+</pre><h3>Mutant 29</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -28,7 +28,7 @@
+         if export_path is not None:
+             sys.stderr.write(
+                 "\n--export-path option requires either --csv-date or "
+-                "--md-date option.\n"
++                "XX--md-date option.\nXX"
+             )
+             sys.exit(1)
+         return False
+</pre><h3>Mutant 30</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -30,7 +30,7 @@
+                 "\n--export-path option requires either --csv-date or "
+                 "--md-date option.\n"
+             )
+-            sys.exit(1)
++            sys.exit(2)
+         return False
+ 
+     if export_path is not None:
+</pre><h3>Mutant 31</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -31,7 +31,7 @@
+                 "--md-date option.\n"
+             )
+             sys.exit(1)
+-        return False
++        return True
+ 
+     if export_path is not None:
+         export_path = Path(export_path)
+</pre><h3>Mutant 35</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -36,7 +36,7 @@
+     if export_path is not None:
+         export_path = Path(export_path)
+         if not export_path.exists():
+-            sys.stderr.write(f"\nInvalid path: {export_path}\n")
++            sys.stderr.write(f"XX\nInvalid path: {export_path}\nXX")
+             sys.exit(1)
+ 
+     if end_date is not None:
+</pre><h3>Mutant 36</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -37,7 +37,7 @@
+         export_path = Path(export_path)
+         if not export_path.exists():
+             sys.stderr.write(f"\nInvalid path: {export_path}\n")
+-            sys.exit(1)
++            sys.exit(2)
+ 
+     if end_date is not None:
+         end_date = get_date_from_str(end_date)
+</pre><h3>Mutant 40</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -42,7 +42,7 @@
+     if end_date is not None:
+         end_date = get_date_from_str(end_date)
+         if end_date is None:
+-            sys.stderr.write(f"\nInvalid date: {end_date}\n")
++            sys.stderr.write(f"XX\nInvalid date: {end_date}\nXX")
+             sys.exit(1)
+ 
+     if csv_date is not None:
+</pre><h3>Mutant 41</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -43,7 +43,7 @@
+         end_date = get_date_from_str(end_date)
+         if end_date is None:
+             sys.stderr.write(f"\nInvalid date: {end_date}\n")
+-            sys.exit(1)
++            sys.exit(2)
+ 
+     if csv_date is not None:
+         csv_date = get_date_from_str(csv_date)
+</pre><h3>Mutant 45</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -48,7 +48,7 @@
+     if csv_date is not None:
+         csv_date = get_date_from_str(csv_date)
+         if csv_date is None:
+-            sys.stderr.write(f"\nInvalid date: {csv_date}\n")
++            sys.stderr.write(f"XX\nInvalid date: {csv_date}\nXX")
+             sys.exit(1)
+ 
+     if csv_date is not None and end_date is not None and csv_date &gt; end_date:
+</pre><h3>Mutant 46</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -49,7 +49,7 @@
+         csv_date = get_date_from_str(csv_date)
+         if csv_date is None:
+             sys.stderr.write(f"\nInvalid date: {csv_date}\n")
+-            sys.exit(1)
++            sys.exit(2)
+ 
+     if csv_date is not None and end_date is not None and csv_date &gt; end_date:
+         sys.stderr.write("\nStart date must be before end date.\n")
+</pre><h3>Mutant 49</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -51,7 +51,7 @@
+             sys.stderr.write(f"\nInvalid date: {csv_date}\n")
+             sys.exit(1)
+ 
+-    if csv_date is not None and end_date is not None and csv_date &gt; end_date:
++    if csv_date is not None and end_date is not None and csv_date &gt;= end_date:
+         sys.stderr.write("\nStart date must be before end date.\n")
+         sys.exit(1)
+ 
+</pre><h3>Mutant 51</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -52,7 +52,7 @@
+             sys.exit(1)
+ 
+     if csv_date is not None and end_date is not None and csv_date &gt; end_date:
+-        sys.stderr.write("\nStart date must be before end date.\n")
++        sys.stderr.write("XX\nStart date must be before end date.\nXX")
+         sys.exit(1)
+ 
+     if md_date is not None:
+</pre><h3>Mutant 56</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -58,7 +58,7 @@
+     if md_date is not None:
+         md_date = get_date_from_str(md_date)
+         if md_date is None:
+-            sys.stderr.write(f"\nInvalid date: {md_date}\n")
++            sys.stderr.write(f"XX\nInvalid date: {md_date}\nXX")
+             sys.exit(1)
+ 
+     app_data = AppData()
+</pre><h3>Mutant 57</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -59,7 +59,7 @@
+         md_date = get_date_from_str(md_date)
+         if md_date is None:
+             sys.stderr.write(f"\nInvalid date: {md_date}\n")
+-            sys.exit(1)
++            sys.exit(2)
+ 
+     app_data = AppData()
+ 
+</pre><h3>Mutant 59</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -63,7 +63,7 @@
+ 
+     app_data = AppData()
+ 
+-    filters = "" if filters is None else filters.upper()
++    filters = "XXXX" if filters is None else filters.upper()
+ 
+     if csv_date is not None:
+         if end_date is not None:
+</pre><h3>Mutant 66</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -78,9 +78,7 @@
+ 
+ 
+ def run(enable_screenshots: bool, enable_testkey: bool) -&gt; None:
+-    ui = PomodorableApp(
+-        enable_screenshots=enable_screenshots, enable_testkey=enable_testkey
+-    )
++    ui = None
+     ui.run()
+ 
+ 
+</pre><h3>Mutant 70</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -84,7 +84,7 @@
+     ui.run()
+ 
+ 
+-CLICK_CONTEXT_SETTINGS = {"help_option_names": ["-h", "--help"]}
++CLICK_CONTEXT_SETTINGS = None
+ 
+ 
+ @click.command(context_settings=CLICK_CONTEXT_SETTINGS)
+</pre><h3>Mutant 74</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -92,7 +92,7 @@
+ @click.option(
+     "--csv-date",
+     default=None,
+-    help="Export a Daily CSV file for a given date (provide the date as YYYY-MM-DD "
++    help="XXExport a Daily CSV file for a given date (provide the date as YYYY-MM-DD XX"
+     "or YY-MM-DD). If a 'Daily CSV Folder' is not configured, then you must provide "
+     "the --export-path option as well. Existing files are not overwritten. "
+     "Exits when finished.",
+</pre><h3>Mutant 75</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -93,7 +93,7 @@
+     "--csv-date",
+     default=None,
+     help="Export a Daily CSV file for a given date (provide the date as YYYY-MM-DD "
+-    "or YY-MM-DD). If a 'Daily CSV Folder' is not configured, then you must provide "
++    "XXor YY-MM-DD). If a 'Daily CSV Folder' is not configured, then you must provide XX"
+     "the --export-path option as well. Existing files are not overwritten. "
+     "Exits when finished.",
+ )
+</pre><h3>Mutant 76</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -94,7 +94,7 @@
+     default=None,
+     help="Export a Daily CSV file for a given date (provide the date as YYYY-MM-DD "
+     "or YY-MM-DD). If a 'Daily CSV Folder' is not configured, then you must provide "
+-    "the --export-path option as well. Existing files are not overwritten. "
++    "XXthe --export-path option as well. Existing files are not overwritten. XX"
+     "Exits when finished.",
+ )
+ @click.option(
+</pre><h3>Mutant 77</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -95,7 +95,7 @@
+     help="Export a Daily CSV file for a given date (provide the date as YYYY-MM-DD "
+     "or YY-MM-DD). If a 'Daily CSV Folder' is not configured, then you must provide "
+     "the --export-path option as well. Existing files are not overwritten. "
+-    "Exits when finished.",
++    "XXExits when finished.XX",
+ )
+ @click.option(
+     "--md-date",
+</pre><h3>Mutant 80</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -100,7 +100,7 @@
+ @click.option(
+     "--md-date",
+     default=None,
+-    help="Export a Daily Markdown file for a given date (provide the date as "
++    help="XXExport a Daily Markdown file for a given date (provide the date as XX"
+     "YYYY-MM-DD or YY-MM-DD). If a 'Daily Markdown Folder' is not configured, "
+     "then you must provide the --export-path option as well. Existing files "
+     "are not overwritten. Exits when finished.",
+</pre><h3>Mutant 81</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -101,7 +101,7 @@
+     "--md-date",
+     default=None,
+     help="Export a Daily Markdown file for a given date (provide the date as "
+-    "YYYY-MM-DD or YY-MM-DD). If a 'Daily Markdown Folder' is not configured, "
++    "XXYYYY-MM-DD or YY-MM-DD). If a 'Daily Markdown Folder' is not configured, XX"
+     "then you must provide the --export-path option as well. Existing files "
+     "are not overwritten. Exits when finished.",
+ )
+</pre><h3>Mutant 82</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -102,7 +102,7 @@
+     default=None,
+     help="Export a Daily Markdown file for a given date (provide the date as "
+     "YYYY-MM-DD or YY-MM-DD). If a 'Daily Markdown Folder' is not configured, "
+-    "then you must provide the --export-path option as well. Existing files "
++    "XXthen you must provide the --export-path option as well. Existing files XX"
+     "are not overwritten. Exits when finished.",
+ )
+ @click.option(
+</pre><h3>Mutant 83</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -103,7 +103,7 @@
+     help="Export a Daily Markdown file for a given date (provide the date as "
+     "YYYY-MM-DD or YY-MM-DD). If a 'Daily Markdown Folder' is not configured, "
+     "then you must provide the --export-path option as well. Existing files "
+-    "are not overwritten. Exits when finished.",
++    "XXare not overwritten. Exits when finished.XX",
+ )
+ @click.option(
+     "--end-date",
+</pre><h3>Mutant 86</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -108,7 +108,7 @@
+ @click.option(
+     "--end-date",
+     default=None,
+-    help="Export a range of sessions from the start date to the end date "
++    help="XXExport a range of sessions from the start date to the end date XX"
+     "(provide the dates as YYYY-MM-DD or YY-MM-DD). This option is only valid "
+     "with the --csv-date or --md-date option.",
+ )
+</pre><h3>Mutant 87</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -109,7 +109,7 @@
+     "--end-date",
+     default=None,
+     help="Export a range of sessions from the start date to the end date "
+-    "(provide the dates as YYYY-MM-DD or YY-MM-DD). This option is only valid "
++    "XX(provide the dates as YYYY-MM-DD or YY-MM-DD). This option is only valid XX"
+     "with the --csv-date or --md-date option.",
+ )
+ @click.option(
+</pre><h3>Mutant 88</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -110,7 +110,7 @@
+     default=None,
+     help="Export a range of sessions from the start date to the end date "
+     "(provide the dates as YYYY-MM-DD or YY-MM-DD). This option is only valid "
+-    "with the --csv-date or --md-date option.",
++    "XXwith the --csv-date or --md-date option.XX",
+ )
+ @click.option(
+     "--export-path",
+</pre><h3>Mutant 91</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -115,7 +115,7 @@
+ @click.option(
+     "--export-path",
+     default=None,
+-    help="Path to export a Daily CSV or Markdown file. "
++    help="XXPath to export a Daily CSV or Markdown file. XX"
+     "This option is required if a 'Daily CSV Folder' or 'Daily Markdown Folder' is "
+     "not configured, or you want the files written to a different location.",
+ )
+</pre><h3>Mutant 92</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -116,7 +116,7 @@
+     "--export-path",
+     default=None,
+     help="Path to export a Daily CSV or Markdown file. "
+-    "This option is required if a 'Daily CSV Folder' or 'Daily Markdown Folder' is "
++    "XXThis option is required if a 'Daily CSV Folder' or 'Daily Markdown Folder' is XX"
+     "not configured, or you want the files written to a different location.",
+ )
+ @click.option(
+</pre><h3>Mutant 93</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -117,7 +117,7 @@
+     default=None,
+     help="Path to export a Daily CSV or Markdown file. "
+     "This option is required if a 'Daily CSV Folder' or 'Daily Markdown Folder' is "
+-    "not configured, or you want the files written to a different location.",
++    "XXnot configured, or you want the files written to a different location.XX",
+ )
+ @click.option(
+     "--filters",
+</pre><h3>Mutant 96</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -121,7 +121,7 @@
+ )
+ @click.option(
+     "--filters",
+-    default="",
++    default="XXXX",
+     help="Filter specified actions from exported CSV data. "
+     "The filter is specified as a string with no spaces, where each character "
+     "represents a type of action to exclude. The characters are: "
+</pre><h3>Mutant 97</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -122,7 +122,7 @@
+ @click.option(
+     "--filters",
+     default="",
+-    help="Filter specified actions from exported CSV data. "
++    help="XXFilter specified actions from exported CSV data. XX"
+     "The filter is specified as a string with no spaces, where each character "
+     "represents a type of action to exclude. The characters are: "
+     "F (Finish), P (Pause - all), R (pause w/o Reason), and X (Stop).",
+</pre><h3>Mutant 98</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -123,7 +123,7 @@
+     "--filters",
+     default="",
+     help="Filter specified actions from exported CSV data. "
+-    "The filter is specified as a string with no spaces, where each character "
++    "XXThe filter is specified as a string with no spaces, where each character XX"
+     "represents a type of action to exclude. The characters are: "
+     "F (Finish), P (Pause - all), R (pause w/o Reason), and X (Stop).",
+ )
+</pre><h3>Mutant 99</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -124,7 +124,7 @@
+     default="",
+     help="Filter specified actions from exported CSV data. "
+     "The filter is specified as a string with no spaces, where each character "
+-    "represents a type of action to exclude. The characters are: "
++    "XXrepresents a type of action to exclude. The characters are: XX"
+     "F (Finish), P (Pause - all), R (pause w/o Reason), and X (Stop).",
+ )
+ @click.option(
+</pre><h3>Mutant 100</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -125,7 +125,7 @@
+     help="Filter specified actions from exported CSV data. "
+     "The filter is specified as a string with no spaces, where each character "
+     "represents a type of action to exclude. The characters are: "
+-    "F (Finish), P (Pause - all), R (pause w/o Reason), and X (Stop).",
++    "XXF (Finish), P (Pause - all), R (pause w/o Reason), and X (Stop).XX",
+ )
+ @click.option(
+     "--ctrl-s",
+</pre><h3>Mutant 103</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -129,7 +129,7 @@
+ )
+ @click.option(
+     "--ctrl-s",
+-    is_flag=True,
++    is_flag=False,
+     default=False,
+     help="Enable [Ctrl]+[s] for saving SVG screenshots in the app. "
+     "Screenshots are saved to the Desktop.",
+</pre><h3>Mutant 104</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -130,7 +130,7 @@
+ @click.option(
+     "--ctrl-s",
+     is_flag=True,
+-    default=False,
++    default=True,
+     help="Enable [Ctrl]+[s] for saving SVG screenshots in the app. "
+     "Screenshots are saved to the Desktop.",
+ )
+</pre><h3>Mutant 105</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -131,7 +131,7 @@
+     "--ctrl-s",
+     is_flag=True,
+     default=False,
+-    help="Enable [Ctrl]+[s] for saving SVG screenshots in the app. "
++    help="XXEnable [Ctrl]+[s] for saving SVG screenshots in the app. XX"
+     "Screenshots are saved to the Desktop.",
+ )
+ @click.option(
+</pre><h3>Mutant 106</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -132,7 +132,7 @@
+     is_flag=True,
+     default=False,
+     help="Enable [Ctrl]+[s] for saving SVG screenshots in the app. "
+-    "Screenshots are saved to the Desktop.",
++    "XXScreenshots are saved to the Desktop.XX",
+ )
+ @click.option(
+     "--ctrl-t",
+</pre><h3>Mutant 109</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -136,7 +136,7 @@
+ )
+ @click.option(
+     "--ctrl-t",
+-    is_flag=True,
++    is_flag=False,
+     default=False,
+     help="Enable [Ctrl]+[t] to run manual testing functions.",
+ )
+</pre><h3>Mutant 110</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -137,7 +137,7 @@
+ @click.option(
+     "--ctrl-t",
+     is_flag=True,
+-    default=False,
++    default=True,
+     help="Enable [Ctrl]+[t] to run manual testing functions.",
+ )
+ def cli(csv_date, md_date, end_date, export_path, filters, ctrl_s, ctrl_t) -&gt; None:
+</pre><h3>Mutant 111</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -138,7 +138,7 @@
+     "--ctrl-t",
+     is_flag=True,
+     default=False,
+-    help="Enable [Ctrl]+[t] to run manual testing functions.",
++    help="XXEnable [Ctrl]+[t] to run manual testing functions.XX",
+ )
+ def cli(csv_date, md_date, end_date, export_path, filters, ctrl_s, ctrl_t) -&gt; None:
+     """Handle command-line options or run the Textual User Interface."""
+</pre><h3>Mutant 113</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -147,6 +147,6 @@
+     run(enable_screenshots=ctrl_s, enable_testkey=ctrl_t)
+ 
+ 
+-if __name__ == "__main__":
++if __name__ != "__main__":
+     cli()
+ 
+</pre><h3>Mutant 114</h3><pre>--- /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
++++ /home/sanderson/Documentos/tsw_code/atividade2/env/lib/python3.10/site-packages/pomodorable/cli.py
+@@ -147,6 +147,6 @@
+     run(enable_screenshots=ctrl_s, enable_testkey=ctrl_t)
+ 
+ 
+-if __name__ == "__main__":
++if __name__ == "XX__main__XX":
+     cli()
+ 
+</pre></body></html>

@@ -1,0 +1,55 @@
+date,act,time,task,message,notes
+2024-01-02,S,08:30:01,Test session 1,(00:10 session < 25:00 default),
+2024-01-02,R,08:30:03,,Pause (resumed),Test pause 1
+2024-01-02,F,08:30:11,,Finish,Started at 08:30:01
+2024-01-02,S,09:30:01,Test session 2,(00:10 session < 25:00 default),
+2024-01-02,R,09:30:03,,Pause (resumed),Test pause 2
+2024-01-02,F,09:30:11,,Finish,Started at 09:30:01
+2024-01-03,S,08:05:01,Test session 3,(00:10 session < 25:00 default),
+2024-01-03,R,08:05:03,,Pause (resumed),Test pause 3
+2024-01-03,F,08:05:11,,Finish,Started at 08:05:01
+2024-01-03,S,08:35:01,Test session 4,(00:10 session < 25:00 default),
+2024-01-03,R,08:35:03,,Pause (resumed),Test pause 4
+2024-01-03,F,08:35:11,,Finish,Started at 08:35:01
+2024-01-02,S,08:30:01,Test session 1,(00:10 session < 25:00 default),
+2024-01-02,R,08:30:03,,Pause (resumed),Test pause 1
+2024-01-02,F,08:30:11,,Finish,Started at 08:30:01
+2024-01-02,S,09:30:01,Test session 2,(00:10 session < 25:00 default),
+2024-01-02,R,09:30:03,,Pause (resumed),Test pause 2
+2024-01-02,F,09:30:11,,Finish,Started at 09:30:01
+2024-01-03,S,08:05:01,Test session 3,(00:10 session < 25:00 default),
+2024-01-03,R,08:05:03,,Pause (resumed),Test pause 3
+2024-01-03,F,08:05:11,,Finish,Started at 08:05:01
+2024-01-03,S,08:35:01,Test session 4,(00:10 session < 25:00 default),
+2024-01-03,R,08:35:03,,Pause (resumed),Test pause 4
+2024-01-03,F,08:35:11,,Finish,Started at 08:35:01
+2024-01-02,S,08:30:01,Test session 1,(00:10 session < 25:00 default),
+2024-01-02,R,08:30:03,,Pause (resumed),Test pause 1
+2024-01-02,F,08:30:11,,Finish,Started at 08:30:01
+2024-01-02,S,09:30:01,Test session 2,(00:10 session < 25:00 default),
+2024-01-02,R,09:30:03,,Pause (resumed),Test pause 2
+2024-01-02,F,09:30:11,,Finish,Started at 09:30:01
+2024-01-03,S,08:05:01,Test session 3,(00:10 session < 25:00 default),
+2024-01-03,R,08:05:03,,Pause (resumed),Test pause 3
+2024-01-03,F,08:05:11,,Finish,Started at 08:05:01
+2024-01-03,S,08:35:01,Test session 4,(00:10 session < 25:00 default),
+2024-01-03,R,08:35:03,,Pause (resumed),Test pause 4
+2024-01-03,F,08:35:11,,Finish,Started at 08:35:01
+2024-01-02,S,08:30:01,Test session 1,(00:10 session < 25:00 default),
+2024-01-02,R,08:30:03,,Pause (resumed),Test pause 1
+2024-01-02,F,08:30:11,,Finish,Started at 08:30:01
+2024-01-02,S,09:30:01,Test session 2,(00:10 session < 25:00 default),
+2024-01-02,R,09:30:03,,Pause (resumed),Test pause 2
+2024-01-02,F,09:30:11,,Finish,Started at 09:30:01
+2024-01-03,S,08:05:01,Test session 3,(00:10 session < 25:00 default),
+2024-01-03,R,08:05:03,,Pause (resumed),Test pause 3
+2024-01-03,F,08:05:11,,Finish,Started at 08:05:01
+2024-01-03,S,08:35:01,Test session 4,(00:10 session < 25:00 default),
+2024-01-03,R,08:35:03,,Pause (resumed),Test pause 4
+2024-01-03,F,08:35:11,,Finish,Started at 08:35:01
+2024-01-02,S,08:30:01,Test session 1,(00:10 session < 25:00 default),
+2024-01-02,E,08:30:06,,Pause (extended),"Pause, extended"
+2024-01-02,R,08:30:13,,Pause (resumed),"Pause, resume"
+2024-01-02,F,08:30:16,,Finish,Started at 08:30:01
+2024-01-02,S,09:00:00,Test session 2,(00:10 session < 25:00 default),
+2024-01-02,X,09:00:05,,Stop,Test stop
